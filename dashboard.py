@@ -428,10 +428,12 @@ st.markdown("""
         line-height: 1.35;
     }
 
-    /* Hide Streamlit branding */
+    /* Hide Streamlit branding but keep sidebar toggle */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    [data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
 
     div[data-testid="stMetric"] {
         background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.05));
